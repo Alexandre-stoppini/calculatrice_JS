@@ -1,0 +1,90 @@
+body, html {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #303030;
+}
+
+.calc {
+    border: 4px solid white;
+    justify-content: space-around;
+}
+
+.ligne5 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ligne4 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ligne3 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ligne2 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ligne1 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ligne0 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.smallButton {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: #383737;
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.smallButtonSpecial {
+    padding: 1rem;
+    font-size: 1.5rem;
+    background: #5C5A5A;
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+}
+
+.clearer {
+    padding: 14px;
+    border: 1px solid white;
+    font-size: 1.5rem;
+    background: #B6734E;
+    color: white;
+    width: 100%;
+    right: -10px ;
+}
+
+.button_0 {
+    padding-left: 39px;
+    padding-right: 39px;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    background: #383737;
+    color: white;
+    border: 1px solid white;
+    width: 100%;
+    /*border-right: 1.5rem solid #383737;*/
+    /*border-left: 1.5rem solid #383737;*/
+}
+
+#demo {
+    width: 100%;
+    padding-top: 20px;
+}

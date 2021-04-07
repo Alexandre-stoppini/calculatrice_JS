@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculatrice</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="calc">
+
+    <div class="ligne5">
+        <!-- Fenêtre d'affichage dynamique des opérations. onkeyup permet d'envoyer les entrées au clavier directement vers une fonction -->
+        <input type="text" id="demo" onkeyup="addNumber(this)">
+        <!-- Permet de détecter l'input correspondant à "Entrée" sur le clavier, sans cela l'input est bloqué par le REGEX -->
+        <script>
+            var input = document.getElementById("demo");
+            input.addEventListener("keyup", function (event) {
+                if (event.keyCode === 13) {
+                    event.preventDefault();
+                    document.getElementById("result").click();
+                }
+            });
+        </script>
+    </div>
+    <!-- Liste de tous les boutons permettant d'entrer ds valeurs ou d'effectuer des opérations -->
+    <div class="ligne4">
+        <span class="clearer" onclick="clearer()">C</span>
+        <span class="smallButtonSpecial" onclick="getImputFromBouton('(')">(</span>
+        <span class="smallButtonSpecial" onclick="getImputFromBouton(')')">)</span>
+        <span class="smallButtonSpecial" onclick="getImputFromBouton('/')">/</span>
+    </div>
+    <div class="ligne3">
+        <span class="smallButton" onclick="getImputFromBouton('7')">7</span>
+        <span class="smallButton" onclick="getImputFromBouton('8')">8</span>
+        <span class="smallButton" onclick="getImputFromBouton('9')">9</span>
+        <span class="smallButtonSpecial" onclick="getImputFromBouton('*')">*</span>
+    </div>
+    <div class="ligne2">
+        <span class="smallButton" onclick="getImputFromBouton('4')">4</span>
+        <span class="smallButton" onclick="getImputFromBouton('5')">5</span>
+        <span class="smallButton" onclick="getImputFromBouton('6')">6</span>
+        <span class="smallButtonSpecial" onclick="getImputFromBouton('-')">-</span>
+    </div>
+    <div class="ligne1">
+        <span class="smallButton" onclick="getImputFromBouton('1')">1</span>
+        <span class="smallButton" onclick="getImputFromBouton('2')">2</span>
+        <span class="smallButton" onclick="getImputFromBouton('3')">3</span>
+        <span class="smallButtonSpecial" onclick="getImputFromBouton('+')">+</span>
+    </div>
+    <div class="ligne0">
+        <span class="button_0" onclick="getImputFromBouton('0')">0</span>
+        <span class="smallButton" onclick="getImputFromBouton('.')">.</span>
+        <span class="smallButton" id="result" onclick="getResult()">=</span>
+    </div>
+</div>
+<script type="text/javascript" src="assets/script.js"></script>
+</body>
+</html>
